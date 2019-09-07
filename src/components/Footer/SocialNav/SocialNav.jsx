@@ -1,11 +1,11 @@
 import React from 'react';
+import { SocialNavLink } from '../SocialNavLink';
 import facebookImage from './facebook.png';
 import iTunesImage from './itunes.png';
 import reverbNationImage from './reverbnation.png';
-import './SocialNav.scss';
-import SocialNavLink from './SocialNavLink';
 import spotifyImage from './spotify.png';
 import youtubeImage from './youtube.png';
+import './SocialNav.scss';
 
 /**
  * A footer navigation bar containing links to social media pages.

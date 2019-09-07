@@ -1,6 +1,6 @@
 import React from 'react';
+import { SocialNav } from './SocialNav';
 import './Footer.scss';
-import SocialNav from './SocialNav';
 
 const CONTACT_EMAIL = 'contact@lastwordband.com';
 

@@ -1,3 +1,1 @@
-import SocialNav from './SocialNav';
-
-export default SocialNav;
+export {default as SocialNav} from './SocialNav';

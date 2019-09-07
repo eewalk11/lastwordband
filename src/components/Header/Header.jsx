@@ -1,6 +1,6 @@
 import React from 'react';
-import './Header.scss';
 import headerLogoImage from './header-logo.png';
+import './Header.scss';
 
 const Header = () => (
   <header className="page-header">
