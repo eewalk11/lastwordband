@@ -1,0 +1,30 @@
+//Styling for album artwork in the album list
+
+
+
+#album-art {
+	width:               $album_art_w;
+	height:              $album_art_w;
+	background-color:    transparent;
+	background-position: center/top;
+	background-repeat:   no-repeat;
+}
+
+@include albumArtBackground("Halls of Madness", "HallsOfMadness.jpg");
+@include albumArtBackground("Towards Obliteration", "TowardsObliteration.jpg");
+
+
+
+@include media_small_mobile(#{$smallscreen_w}px) {
+	#album-art {
+		width:  $album_art_small_w;
+		height: $album_art_small_w;
+	}
+}
+		
+@include album_art_breakpoint {
+	@include albumArtBackground("Halls of Madness", "HallsOfMadness_small.jpg");
+	@include albumArtBackground("Towards Obliteration", "TowardsObliteration_small.jpg")
+}
+
+

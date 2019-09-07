@@ -1,0 +1,16 @@
+//The page footer
+
+#page-footer {
+	margin-bottom:    0;
+	padding:          2em 4em;
+	color:            $dark_green;
+	background-color: $deep_green;
+	
+	a {
+		color:           $dark_green;
+		text-decoration: underline;
+		&:hover {
+			color: $light_green;
+		}
+	}
+}

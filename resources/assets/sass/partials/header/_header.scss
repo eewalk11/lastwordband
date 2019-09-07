@@ -1,0 +1,38 @@
+//Styles for the home page header
+
+
+
+#page-header {
+	
+	position:    relative;
+	padding-top: 32px;
+	
+	h1 {
+		position:   relative;
+		margin:     0;
+		text-align: center;
+		z-index:    1;
+	}
+	
+	h2 {
+		position:   absolute;
+		top:        190px;
+		width:      100%;
+		margin:     0;
+		font-size:  60px;
+		text-align: center;
+		color:      $crimson;
+		z-index:    2;
+		
+		@include text_shadow;
+	}
+	
+}
+
+
+
+//Media queries
+
+@import "partials/header/media/header-mq";
+
+

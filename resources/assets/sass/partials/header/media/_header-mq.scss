@@ -1,0 +1,36 @@
+//Media queries for the header
+
+
+
+@include media_small_mobile {
+	#page-header {
+		img {
+			width:  350px;
+			height: auto;
+		}
+		
+		h2 {
+			top:       105px;
+			font-size: 27px;
+		}
+	}
+}
+
+
+
+@include media_medium(#{$media_small + 1}px, 1020px) {
+	#page-header {
+		img {
+			width:  600px;
+			height: auto;
+			
+		}
+		
+		h2 {
+			top:       150px;
+			font-size: 45px;
+		}
+	}
+}
+
+

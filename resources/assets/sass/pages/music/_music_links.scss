@@ -1,0 +1,67 @@
+//Links to purchase albums
+
+
+
+#album-purchase-links {
+	
+	width:            $album_art_w;
+	margin:           1em 0 0;
+	border-radius:    1em;
+	padding:          1em;
+	background-color: #404040;
+	
+	
+	
+	img {
+		width:        $icon_size;
+		height:       $icon_size;
+		margin-right: 1em;
+	}
+	
+	
+	
+	ul {
+		margin:     0;
+		padding:    0;
+		list-style: none;
+	}
+	
+	li {
+		display:     flex;
+		margin:      .5em 0;
+		align-items: center;
+		
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	
+	
+	a {
+		&, &:visited {
+			color: #ffffff;
+		}
+	}
+	
+	
+
+	//Center the links when the display breaks from table layout
+		
+	@include media_medium_less {
+		margin-right: auto;
+		margin-left:  auto;
+	}
+	
+	//Smaller size when the album art gets smaller
+
+	@include album_art_breakpoint {
+		width: $album_art_small_w;
+	}
+	
+}
+
+

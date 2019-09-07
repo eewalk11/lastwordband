@@ -1,0 +1,3 @@
+//Define app namespace
+
+LastWord = {};

@@ -1,0 +1,37 @@
+//Variables for the app's SCSS files
+
+
+
+//Default section spacing
+
+$spacing:        8em;
+$spacing_mobile: 4em;
+
+$hpad:           6em;
+$hpad_small:     3em;
+$hpad_mobile:    1.5em;
+
+
+
+//Colors
+
+$deep_crimson: #330000;
+$crimson:      #770000;
+
+$deep_green:   #001a00;
+$dark_green:   #007400;
+$light_green:  #32ad08;
+
+$text:         #c6c6c6;
+$link:         #b00000;
+
+
+
+//Media query breakpoints
+//These are in pixels
+
+$media_medium: 1200;
+$media_small:  800;
+$media_mobile: 600;
+
+

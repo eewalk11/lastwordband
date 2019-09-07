@@ -1,0 +1,42 @@
+//Some formatting classes
+
+
+
+//Horizontal padding
+.hpad {
+	padding-right: $hpad;
+	padding-left:  $hpad;
+	
+	@include media_medium(#{$media_mobile + 1}px, #{$media_small}px) {
+		padding-right: $hpad_small;
+		padding-left:  $hpad_small;
+	}
+	
+	//This will be triggered on small screens at the mobile size, not the normal small size
+	@include media_small_mobile(#{$media_mobile}px) {
+		padding-right: $hpad_mobile;
+		padding-left:  $hpad_mobile;
+	}
+}
+
+
+
+//Vertical margin
+.vmar {
+	margin-top:    $spacing;
+	margin-bottom: $spacing;
+	
+	@include media_small_mobile(#{$media_mobile}px) {
+		margin-top:    $spacing_mobile;
+		margin-bottom: $spacing_mobile;
+	}
+}
+
+
+
+//No line break
+.nobr {
+	white-space: nowrap;
+}
+
+

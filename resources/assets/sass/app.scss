@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+//Import modules
+@import "modules/vars";
+@import "modules/mixins";
+@import "modules/classes";
+
+//Import base template
+@import "template/template";
+
+//Import partials
+@import "partials/social-nav/social-nav";
+@import "partials/header/header";
+@import "partials/nav/nav";
+@import "partials/footer/footer";
+
+//Import pages
+@import "pages/home/home";
+@import "pages/music/music";

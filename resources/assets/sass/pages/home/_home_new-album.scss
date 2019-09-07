@@ -1,0 +1,33 @@
+//Style the new album player
+
+
+
+#HoM-embed {
+	margin-top: 8em;
+	text-align: center;
+	
+	p {
+		max-width:    850px;
+		margin-right: auto;
+		margin-left:  auto;
+	}
+	
+	@include media_small_mobile {
+		margin-top:    4em;
+		margin-bottom: 4em;
+		
+		h2 {
+			text-align: left;
+		}
+	}
+}
+
+
+
+#HoM-player {
+	height:     150px;
+	margin-top: 2em;
+	border:     2px solid #404040;
+}
+
+

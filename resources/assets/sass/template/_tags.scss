@@ -1,0 +1,72 @@
+//Default styling for HTML tags
+
+
+
+h1 {font-size: 2.5em;}
+h2 {font-size: 2.25em;}
+h3 {font-size: 2em;}
+h4 {font-size: 1.7em;}
+h5 {font-size: 1.3em;}
+h6 {font-size: 1em;}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: .5em 0;
+}
+
+p, ul, ol {
+	margin: 1em 0;
+	font-size: 1em;
+}
+
+ul, ol {
+	padding: 0 0 0 1.75em;
+}
+
+li {
+	margin: .15em 0;
+	
+	&:first-child {margin-top:    0;}
+	&:last-child  {margin-bottom: 0;}
+}
+
+a {
+	&, &:visited {
+		color:           $link;
+		text-decoration: none;
+	}
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+
+
+@include media_small_mobile {
+	p {
+		text-align: left;
+	}
+}
+
+
+
+@include media_small {
+	h1 {font-size: 1.5em;}
+	h2 {font-size: 1.5em;}
+	h3 {font-size: 1.25em;}
+	h4 {font-size: 1.25em;}
+	h5 {font-size: 1em;}
+	h6 {font-size: 1em;}
+}
+
+
+
+@include media_mobile {
+	h1 {font-size: 1.15em;}
+	h2 {font-size: 1.15em;}
+	h3 {font-size: 1em;}
+	h4 {font-size: 1em;}
+	h5 {font-size: .9em;}
+	h6 {font-size: .9em;}
+}
+
+

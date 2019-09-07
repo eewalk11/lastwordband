@@ -1,0 +1,89 @@
+//Mixins for the app's SCSS files
+
+
+
+//Media queries
+
+@mixin media_medium($min_view_w: #{$media_small + 1}px, $max_view_w: #{$media_medium}px) {
+	@media only screen and (min-width: #{$min_view_w}) and (max-width: #{$max_view_w}) {
+		@content;
+	}
+}
+
+@mixin media_medium_less($max_view_w: #{$media_medium}px) {
+	@media only screen and (max-width: #{$max_view_w}) {
+		@content;
+	}
+}
+
+@mixin media_small($max_view_w: #{$media_small}px) {
+	@media only screen and (max-width: #{$max_view_w}) {
+		@content;
+	}
+}
+
+@mixin media_small_mobile($max_view_w: #{$media_small}px, $max_dev_w: #{$media_mobile}px) {
+	@media only screen and (max-width: #{$max_view_w}),
+			only screen and (max-device-width: #{$max_dev_w}) {
+		@content;
+	}
+}
+
+@mixin media_mobile($max_dev_w: #{$media_mobile}px) {
+	@media only screen and (max-device-width: #{$max_dev_w}) {
+		@content;
+	}
+}
+
+
+
+//Disable font boosting on chrome mobile
+
+@mixin disable_font_boost() {
+	max-height: 1000000px;
+}
+
+
+
+//Include the website font family
+
+@mixin font_family() {
+	font-family: Roboto, Impact, Charcoal, sans-serif;
+}
+
+
+
+//Apply a margin for the default spacing of sections in the website
+
+@mixin vmargin($top: #{$spacing}, $bottom: #{$spacing}) {
+	margin-top:    $top;
+	margin-bottom: $bottom;
+}
+
+//Apply padding for the default spacing of sections in the website
+
+@mixin vpadding($top: #{$spacing}, $bottom: #{$spacing}) {
+	padding-top:    $top;
+	padding-bottom: $bottom;
+}
+
+
+
+//Apply text shadow to headers
+
+@mixin text_shadow($color: #000, $blur: .1em) {
+	text-shadow: 0 0 $blur $color, 0 0 $blur $color, 0 0 $blur $color,
+			0 0 $blur $color, 0 0 $blur $color, 0 0 $blur $color;
+}
+
+
+
+//Create an album art background property
+
+@mixin albumArtBackground($title, $file) {
+	#album[data-title='#{$title}'] #album-art {
+		background-image: url(/img/art/#{$file});
+	}
+}
+
+

@@ -1,0 +1,30 @@
+//Home page background
+
+
+
+#homepage {
+	
+	#bgwrapper1, #bgwrapper2 {
+		background-size:       contain;
+		background-repeat:     no-repeat;
+		background-attachment: fixed;
+	}
+	
+	#bgwrapper1 {
+		background-image:    url(/img/background/skull-bg-left.png);
+		background-position: left center;
+		
+		@include media_small_mobile {
+			background: none;
+			display:    none;
+		}
+	}
+	
+	#bgwrapper2 {
+		background-image:    url(/img/background/skull-bg-right.png);
+		background-position: right center;
+	}
+	
+}
+
+

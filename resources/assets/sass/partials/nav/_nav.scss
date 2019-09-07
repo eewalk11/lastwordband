@@ -1,0 +1,25 @@
+//Styles for the home page navbar
+
+
+
+#page-nav {
+	
+	ul {
+		list-style: none;
+	}
+	
+	li {
+		display: inline-block;
+	}
+	
+	a {
+		text-decoration: none;
+		
+		&, &:hover, &:visited {
+			color: $text;
+		}
+	}
+	
+}
+
+
