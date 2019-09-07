@@ -1,0 +1,5 @@
+// Apply text shadow to headers
+@mixin text_shadow($color: #000, $blur: .1em) {
+  text-shadow: 0 0 $blur $color, 0 0 $blur $color, 0 0 $blur $color,
+  0 0 $blur $color, 0 0 $blur $color, 0 0 $blur $color;
+}
