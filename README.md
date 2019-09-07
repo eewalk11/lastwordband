@@ -1,2 +1,3 @@
-# lastwordband
-Website for Last Word
+# Last Word
+
+Official website for Last Word: [lastwordband.com](https://lastwordband.com) 
