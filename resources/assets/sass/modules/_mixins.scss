@@ -1,15 +1,3 @@
-//Disable font boosting on chrome mobile
-
-@mixin disable_font_boost() {
-	max-height: 1000000px;
-}
-
-//Include the website font family
-
-@mixin font_family() {
-	font-family: Roboto, Impact, Charcoal, sans-serif;
-}
-
 //Apply a margin for the default spacing of sections in the website
 
 @mixin vmargin($top: #{$spacing}, $bottom: #{$spacing}) {

@@ -1,0 +1,164 @@
+@import './sass/mixins/media-queries';
+@import './sass/vars/colors';
+
+// Fonts
+
+@font-face {
+  font-family: Roboto;
+  src: url(./resources/fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  font-weight: bold;
+  src: url(./resources/fonts/Roboto-Black.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style:  italic;
+  src: url(./resources/fonts/Roboto-MediumItalic.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style:  italic;
+  font-weight: bold;
+  src: url(./resources/fonts/Roboto-BlackItalic.ttf);
+}
+
+// Default styling for HTML tags
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto, Impact, Charcoal, sans-serif;
+  max-height: 1000000px; // Disable font boosting on chrome mobile
+}
+
+body {
+  background-color: #000000;
+  color: $text;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: .5rem 0;
+}
+
+h2 {
+  font-size: 2.25rem;
+  margin: .5rem 0;
+}
+
+h3 {
+  font-size: 2rem;
+  margin: .5rem 0;
+}
+
+h4 {
+  font-size: 1.7rem;
+  margin: .5rem 0;
+}
+
+h5 {
+  font-size: 1.3rem;
+  margin: .5rem 0;
+}
+
+h6 {
+  font-size: 1rem;
+  margin: .5rem 0;
+}
+
+p, ul, ol {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+ul, ol {
+  padding: 0 0 0 1.75rem;
+}
+
+li {
+  margin: .15rem 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  &, &:visited {
+    color: $link;
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@include media_small_mobile {
+  p {
+    text-align: left;
+  }
+}
+
+@include media_small {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+}
+
+@include media_mobile {
+  h1 {
+    font-size: 1.15rem;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: .9rem;
+  }
+
+  h6 {
+    font-size: .9rem;
+  }
+}
