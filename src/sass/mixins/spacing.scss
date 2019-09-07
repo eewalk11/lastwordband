@@ -1,0 +1,13 @@
+@import './media-queries';
+@import '../vars/spacing';
+
+// Applies standard vertical margin spacing
+@mixin verticalMargin {
+  margin-top:    $spacing;
+  margin-bottom: $spacing;
+
+  @include media_small_mobile(#{$media_mobile}px) {
+    margin-top:    $spacing_mobile;
+    margin-bottom: $spacing_mobile;
+  }
+}

@@ -1,0 +1,29 @@
+import React from 'react';
+import facebookImage from './facebook.png';
+import iTunesImage from './itunes.png';
+import reverbNationImage from './reverbnation.png';
+import './SocialNav.scss';
+import SocialNavLink from './SocialNavLink';
+import spotifyImage from './spotify.png';
+import youtubeImage from './youtube.png';
+
+/**
+ * A footer navigation bar containing links to social media pages.
+ */
+const SocialNav = () => (
+  <nav className="social-nav">
+    <ul>
+      <SocialNavLink url="https://facebook.com/WeAreLastWord" image={facebookImage} title="Facebook" />
+      <SocialNavLink url="https://reverbnation.com/WeAreLastWord" image={reverbNationImage} title="Reverb Nation" />
+    </ul>
+    <ul>
+      <SocialNavLink url="https://itunes.apple.com/us/artist/last-word/id1013317648" image={iTunesImage}
+                     title="iTunes" />
+      <SocialNavLink url="https://play.spotify.com/album/6X8aJA2Xee26qKYCbvarbg" image={spotifyImage} title="Spotify" />
+      <SocialNavLink url="https://www.youtube.com/results?search_query=%22last+word%22+%22halls+of+madness%22"
+                     image={youtubeImage} title="YouTube" />
+    </ul>
+  </nav>
+);
+
+export default SocialNav;

@@ -1,0 +1,32 @@
+@import '../../../sass/mixins/media-queries';
+@import '../../../sass/vars/colors';
+
+.social-nav {
+  text-align: center;
+
+  ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0 40px 2rem 40px;
+    padding: 0;
+    text-align: center;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@include media_small_mobile {
+  .social-nav {
+    ul {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

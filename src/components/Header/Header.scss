@@ -2,7 +2,7 @@
 @import '../../sass/mixins/text';
 @import '../../sass/vars/colors';
 
-#page-header {
+.page-header {
   padding-top: 32px;
   position: relative;
 
@@ -24,10 +24,14 @@
     width: 100%;
     z-index: 2;
   }
+
+  img {
+    display: inline-block;
+  }
 }
 
 @include media_small_mobile {
-  #page-header {
+  .page-header {
     img {
       height: auto;
       width: 350px;
@@ -41,7 +45,7 @@
 }
 
 @include media_medium(#{$media_small + 1}px, 1020px) {
-  #page-header {
+  .page-header {
     img {
       height: auto;
       width: 600px;
