@@ -1,10 +1,10 @@
 import React from 'react';
 import { SocialNavLink } from '../SocialNavLink';
-import facebookImage from './facebook.png';
-import iTunesImage from './itunes.png';
-import reverbNationImage from './reverbnation.png';
-import spotifyImage from './spotify.png';
-import youtubeImage from './youtube.png';
+import facebookImage from '../bin/facebook.png';
+import iTunesImage from '../bin/itunes.png';
+import reverbNationImage from '../bin/reverbNation.png';
+import spotifyImage from '../bin/spotify.png';
+import youtubeImage from '../bin/youtube.png';
 import './SocialNav.scss';
 
 /**
