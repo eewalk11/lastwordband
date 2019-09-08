@@ -1,0 +1,1 @@
+export const UUID_NAMESPACE = 'https://lastwordband.com';
