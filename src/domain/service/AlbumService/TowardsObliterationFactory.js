@@ -1,7 +1,5 @@
 import moment from 'moment';
 import { Album } from '../../model';
-import IdFactory from './IdFactory';
-import TrackFactory from './TrackFactory';
 import artwork from './bin/TowardsObliteration.jpg';
 import artworkSmall from './bin/TowardsObliteration_small.jpg';
 

@@ -3,27 +3,27 @@
 
 // Applies standard Horizontal padding
 @mixin horizontalPadding {
+  padding-left: $hpad;
   padding-right: $hpad;
-  padding-left:  $hpad;
 
   @include media_medium(#{$media_mobile + 1}px, #{$media_small}px) {
+    padding-left: $hpad_small;
     padding-right: $hpad_small;
-    padding-left:  $hpad_small;
   }
 
   @include media_small_mobile(#{$media_mobile}px) {
     padding-right: $hpad_mobile;
-    padding-left:  $hpad_mobile;
+    padding-left: $hpad_mobile;
   }
 }
 
 // Applies standard vertical margin spacing
 @mixin verticalMargin {
-  margin-top:    $spacing;
   margin-bottom: $spacing;
+  margin-top: $spacing;
 
   @include media_small_mobile(#{$media_mobile}px) {
-    margin-top:    $spacing_mobile;
     margin-bottom: $spacing_mobile;
+    margin-top: $spacing_mobile;
   }
 }

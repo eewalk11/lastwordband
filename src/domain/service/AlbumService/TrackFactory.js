@@ -1,5 +1,4 @@
 import { Album, Track } from '../../model';
-import IdFactory from './IdFactory';
 
 const mapTrackTitles = (album, titles, idFactory) =>
   titles.map((title, i) => {

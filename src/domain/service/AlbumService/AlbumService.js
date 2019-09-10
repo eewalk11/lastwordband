@@ -25,13 +25,13 @@ export default class AlbumService {
    */
   sortByDate({ albums = this.albums , desc = true }) {
     return albums.sort((a, b) => {
+      let val = 0;
       if (a.date < b.date) {
-        return -1;
+        val = -1;
+      } else if (b.date < a.date) {
+        val = 1;
       }
-      if (b.date < a.date) {
-        return 1;
-      }
-      return 0;
+      return desc ? val * -1 : val;
     });
   }
 }

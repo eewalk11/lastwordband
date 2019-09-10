@@ -1,1 +1,1 @@
-export const UUID_NAMESPACE = 'https://lastwordband.com';
+export const UUID_NAMESPACE = '3546d306-86b9-441f-be87-f595b0593d6a';

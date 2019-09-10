@@ -1,7 +1,5 @@
 import moment from 'moment';
 import { Album } from '../../model';
-import IdFactory from './IdFactory';
-import TrackFactory from './TrackFactory'
 import artwork from './bin/HallsOfMadness.jpg';
 import artworkSmall from './bin/HallsOfMadness_small.jpg';
 
@@ -32,7 +30,7 @@ export default class HallsOfMadnessFactory {
     album = this.idFactory.generateAlbumId(album);
     return this.trackFactory.generateTracks({
       album,
-      tracks: [
+      titles: [
         'GOBOSI',
         'After Me the Floods',
         'Subsequential Revelation',

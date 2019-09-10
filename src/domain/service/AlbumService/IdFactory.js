@@ -1,5 +1,5 @@
 import uuidV5 from 'uuid/v5';
-import { UUID_NAMESPACE } from '../../../const/uuid';
+import { UUID_NAMESPACE } from '../../../const';
 import { Album, Track } from '../../model';
 
 /**
@@ -36,7 +36,7 @@ export default class IdFactory {
     }
     return new Track({
       ...track,
-      id: uuidV5(`${album.id}:${track.number}`)
+      id: uuidV5(`${album.id}:${track.number}`, UUID_NAMESPACE)
     });
   };
 }
