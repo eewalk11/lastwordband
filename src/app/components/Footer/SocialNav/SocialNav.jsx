@@ -1,10 +1,10 @@
 import React from 'react';
-import { SocialNavLink } from '../SocialNavLink';
-import facebookImage from '../bin/facebook.png';
-import iTunesImage from '../bin/itunes.png';
-import reverbNationImage from '../bin/reverbNation.png';
-import spotifyImage from '../bin/spotify.png';
-import youtubeImage from '../bin/youtube.png';
+import SocialNavLink from './SocialNavLink';
+import facebookImage from './bin/facebook.png';
+import iTunesImage from './bin/itunes.png';
+import reverbNationImage from './bin/reverbNation.png';
+import spotifyImage from './bin/spotify.png';
+import youtubeImage from './bin/youtube.png';
 import './SocialNav.scss';
 
 /**
@@ -20,7 +20,8 @@ export default function SocialNav() {
       <ul>
         <SocialNavLink url="https://itunes.apple.com/us/artist/last-word/id1013317648" image={iTunesImage}
                        title="iTunes" />
-        <SocialNavLink url="https://play.spotify.com/album/6X8aJA2Xee26qKYCbvarbg" image={spotifyImage} title="Spotify" />
+        <SocialNavLink url="https://play.spotify.com/album/6X8aJA2Xee26qKYCbvarbg" image={spotifyImage}
+                       title="Spotify" />
         <SocialNavLink url="https://www.youtube.com/results?search_query=%22last+word%22+%22halls+of+madness%22"
                        image={youtubeImage} title="YouTube" />
       </ul>

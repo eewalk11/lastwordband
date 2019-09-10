@@ -1,6 +1,5 @@
 import uuidV5 from 'uuid/v5';
-import { UUID_NAMESPACE } from '../../../const';
-import { Album, Track } from '../../model';
+import { Album, Track, UUID_NAMESPACE } from 'app';
 
 /**
  * Factory to generate IDs for new models.

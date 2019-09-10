@@ -1,5 +1,5 @@
 import React from 'react';
-import * as services from 'domain/service';
+import * as services from 'app/domain/service';
 
 /**
  * Higher order component to inject services as properties.

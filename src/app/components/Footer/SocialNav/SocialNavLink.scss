@@ -1,7 +1,10 @@
-@import '../../../sass/mixins/media-queries';
-@import '../../../sass/vars/colors.scss';
+@import '../../../../sass/mixins/compatibility';
+@import '../../../../sass/mixins/media-queries';
+@import '../../../../sass/vars/colors.scss';
 
 .social-nav-link {
+  @include transitionWithVendors('background-color 400ms');
+
   background-color: $lightGreen;
   display: inline-block;
   margin: 0 10px;
@@ -13,6 +16,10 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &:hover {
+    background-color: #ffffff;
   }
 
   img {

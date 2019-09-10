@@ -1,6 +1,6 @@
 import React from 'react';
-import { Footer, Header } from 'components';
-import { HomePage } from 'pages';
+import { Footer, Header } from 'app/components';
+import { HomePage } from 'app/pages';
 import './ContentWrapper.scss';
 
 export default function ContentWrapper() {
