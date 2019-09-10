@@ -1,0 +1,7 @@
+@mixin transitionWithVendors($val) {
+  -moz-transition: #{$val};
+  -ms-transition: #{$val};
+  -o-transition: #{$val};
+  -webkit-transition: #{$val};
+  transition: #{$val};
+}
