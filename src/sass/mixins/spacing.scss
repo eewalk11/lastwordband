@@ -1,6 +1,22 @@
 @import './media-queries';
 @import '../vars/spacing';
 
+// Applies standard Horizontal padding
+@mixin horizontalPadding {
+  padding-right: $hpad;
+  padding-left:  $hpad;
+
+  @include media_medium(#{$media_mobile + 1}px, #{$media_small}px) {
+    padding-right: $hpad_small;
+    padding-left:  $hpad_small;
+  }
+
+  @include media_small_mobile(#{$media_mobile}px) {
+    padding-right: $hpad_mobile;
+    padding-left:  $hpad_mobile;
+  }
+}
+
 // Applies standard vertical margin spacing
 @mixin verticalMargin {
   margin-top:    $spacing;

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Footer } from '../Footer';
-import { Header } from '../Header';
+import { Footer, Header } from 'components';
+import { HomePage } from 'pages';
 import './ContentWrapper.scss';
 
 export default function ContentWrapper() {
@@ -12,7 +12,9 @@ export default function ContentWrapper() {
       <div className='bgwrapper2' />
 
       <Header />
-      <main className='content-wrapper' />
+      <main className='content-wrapper'>
+        <HomePage />
+      </main>
       <Footer />
     </div>
   );
