@@ -1,0 +1,31 @@
+@import '../../sass/mixins/media-queries';
+
+.bgwrapper1, .bgwrapper2 {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+
+.bgwrapper1 {
+  background-image: url(./bin/skullBgLeft.png);
+  background-position: left center;
+
+  @include media_small_mobile {
+    background: none;
+    display: none;
+  }
+}
+
+.bgwrapper2 {
+  background-image: url(./bin/skullBgRight.png);
+  background-position: right center;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 0;
+}

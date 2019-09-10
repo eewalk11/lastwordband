@@ -4,7 +4,7 @@ import './Footer.scss';
 
 const CONTACT_EMAIL = 'contact@lastwordband.com';
 
-const Footer = () => {
+export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="page-footer">
@@ -22,5 +22,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

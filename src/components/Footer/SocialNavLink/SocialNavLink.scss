@@ -3,11 +3,12 @@
 @import '../../../sass/vars/colors.scss';
 
 .social-nav-link {
+  @include transitionWithVendors('background-color 400ms');
+
   background-color: $lightGreen;
   display: inline-block;
   margin: 0 10px;
   padding: 0;
-  @include transitionWithVendors('background-color 400ms');
 
   &:first-child {
     margin-left: 0;
