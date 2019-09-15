@@ -1,9 +1,8 @@
 import React from 'react';
 import { Footer, Header } from 'app/components';
-import { HomePage } from 'app/pages';
 import './ContentWrapper.scss';
 
-export default function ContentWrapper() {
+export default function ContentWrapper({ children }) {
   return (
     <div className='page-wrapper'>
       {/* These divs will be sized to fit the screen using JavaScript and will contain background
@@ -13,7 +12,7 @@ export default function ContentWrapper() {
 
       <Header />
       <main className='content-wrapper'>
-        <HomePage />
+        {children}
       </main>
       <Footer />
     </div>
