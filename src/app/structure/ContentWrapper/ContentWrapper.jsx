@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer, Header } from 'app/components';
+import { Footer, Header } from 'app/structure';
 import './ContentWrapper.scss';
 
 export default function ContentWrapper({ children }) {
