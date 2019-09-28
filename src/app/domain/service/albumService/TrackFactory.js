@@ -5,13 +5,11 @@ import { Album, Track } from '../../model';
  * @param {Album} album Album the tracks belong to.
  * @param {string[]} trackTitles Track titles to map to track objects.
  * @param {IdFactory} idFactory
- * @param {TrackService} trackService
  * @returns {Track[]} Array of tracks.
  */
-const mapTrackTitles = ({ album, trackTitles, idFactory, trackService }) => {
+const mapTrackTitles = ({ album, trackTitles, idFactory }) => {
   return trackTitles.map((trackTitle, i) => {
     const track = new Track({
-      lyrics: trackService.getLyrics({ album, trackTitle }),
       number: i + 1,
       title: trackTitle
     });
@@ -25,11 +23,9 @@ const mapTrackTitles = ({ album, trackTitles, idFactory, trackService }) => {
 export default class TrackFactory {
   /**
    * @param {IdFactory} idFactory
-   * @param {TrackService} trackService
    */
-  constructor({ idFactory, trackService }) {
+  constructor({ idFactory }) {
     this.idFactory = idFactory;
-    this.trackService = trackService;
   }
 
   /**
@@ -44,8 +40,7 @@ export default class TrackFactory {
       tracks: mapTrackTitles({
         album,
         trackTitles,
-        idFactory: this.idFactory,
-        trackService: this.trackService
+        idFactory: this.idFactory
       })
     });
   }

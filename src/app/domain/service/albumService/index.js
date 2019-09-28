@@ -3,13 +3,9 @@ import HallsOfMadnessFactory from './HallsOfMadnessFactory';
 import IdFactory from './IdFactory';
 import TowardsObliterationFactory from './TowardsObliterationFactory';
 import TrackFactory from './TrackFactory';
-import { trackService } from '../trackService';
 
 const idFactory = new IdFactory();
-const trackFactory = new TrackFactory({
-  idFactory,
-  trackService
-});
+const trackFactory = new TrackFactory({ idFactory });
 
 const albumFactories = [
   new TowardsObliterationFactory({ idFactory, trackFactory }),
