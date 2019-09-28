@@ -30,7 +30,7 @@ export default class HallsOfMadnessFactory {
     album = this.idFactory.generateAlbumId(album);
     return this.trackFactory.generateTracks({
       album,
-      titles: [
+      trackTitles: [
         'GOBOSI',
         'After Me the Floods',
         'Subsequential Revelation',

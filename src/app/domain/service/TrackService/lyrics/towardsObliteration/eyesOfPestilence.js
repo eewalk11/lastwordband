@@ -1,4 +1,4 @@
-Infecting reaper, let our final plague begin
+export default `Infecting reaper, let our final plague begin
 If I can't have this world, no one will
 Receding deeper, into the void we call the future
 All shall rot
@@ -16,4 +16,4 @@ All consumed
 Final hour, let our judgement now condemn
 Our suicide
 Plague devour, let our rivers run with blood
-All defiled
+All defiled`;

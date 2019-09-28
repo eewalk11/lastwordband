@@ -1,4 +1,4 @@
-Contort my empathy, a rotting effigy
+export default `Contort my empathy, a rotting effigy
 A source of constant pain you will remain
 
 No more will I be swept aside
@@ -16,10 +16,10 @@ And now they call you from the depths of Hell
 None will absolve you so well
 Endless obsession with death
 
-Somwhere beyond this world I know
+Somewhere beyond this world I know
 Lies my promised land but I must rise to meet the day
 Shot down into oblivion
 This beginning is where you end
 
 Now you lie bleeding from this world
-Slow death comes creeping for your soul
+Slow death comes creeping for your soul`;

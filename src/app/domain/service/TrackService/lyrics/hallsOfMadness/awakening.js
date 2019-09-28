@@ -1,4 +1,4 @@
-Now we must question who we are
+export default `Now we must question who we are
 And what we're meant to be
 In this life
 I'll find some meaning
@@ -19,4 +19,4 @@ You're stronger than their lies
 Never lie in silence
 Never accept defeat
 
-You're so much better than this
+You're so much better than this`;

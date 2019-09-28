@@ -30,7 +30,7 @@ export default class TowardsObliterationFactory {
     album = this.idFactory.generateAlbumId(album);
     return this.trackFactory.generateTracks({
       album,
-      titles: [
+      trackTitles: [
         'Waking Dream',
         'Towards Obliteration',
         'Eyes of Pestilence',

@@ -1,4 +1,4 @@
-I feel it's time to raise the dead
+export default `I feel it's time to raise the dead
 And rethink all you've ever said
 One look into your hollowed eyes
 I know your breath holds only lies
@@ -28,4 +28,4 @@ This self-abuse is fucking done
 All this time spent building to destroy
 Time slowly slipping into the void
 Cut out your heart and bleed
-As I depart from needing you
+As I depart from needing you`;

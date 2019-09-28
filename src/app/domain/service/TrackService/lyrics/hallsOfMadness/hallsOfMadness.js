@@ -1,4 +1,4 @@
-Fearing every little thing
+export default `Fearing every little thing
 Hopelessy languishing
 We have become a husk
 Of what we used to be
@@ -30,4 +30,4 @@ Crushed skull
 Limbs splitting beside
 Entrails
 Exposed to the elements
-Defiled
+Defiled`;

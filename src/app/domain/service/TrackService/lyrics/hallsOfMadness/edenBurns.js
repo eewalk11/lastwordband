@@ -1,4 +1,4 @@
-A fire burns before them
+export default `A fire burns before them
 Behind them a pillar of flame
 Before me the gardens of Eden
 Behind them a desert of waste
@@ -22,4 +22,4 @@ A fire now surrounds me
 I've become the pillar of flame
 
 No longer will I bow before your false god
-I refuse to kneel like a coward
+I refuse to kneel like a coward`;

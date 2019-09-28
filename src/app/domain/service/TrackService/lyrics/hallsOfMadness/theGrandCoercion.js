@@ -1,4 +1,4 @@
-My existence is laden in cruelty
+export default `My existence is laden in cruelty
 Resist all you want in vain
 All of your efforts are sure to be
 Wasted on a deed that was fucked from the start
@@ -31,4 +31,4 @@ Your thoughts are mine for me to make
 Dead hearts roam in hordes
 With no sign of their retreat
 Your world shall be forgotten
-Your lives shall be fogotten
+Your lives shall be forgotten`;
