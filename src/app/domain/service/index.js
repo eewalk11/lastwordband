@@ -1,2 +1,2 @@
-export * from './AlbumService';
-export * from './TrackService';
+export * from './albumService';
+export * from './trackService';

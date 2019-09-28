@@ -3,7 +3,7 @@ import HallsOfMadnessFactory from './HallsOfMadnessFactory';
 import IdFactory from './IdFactory';
 import TowardsObliterationFactory from './TowardsObliterationFactory';
 import TrackFactory from './TrackFactory';
-import { trackService } from '../TrackService';
+import { trackService } from '../trackService';
 
 const idFactory = new IdFactory();
 const trackFactory = new TrackFactory({

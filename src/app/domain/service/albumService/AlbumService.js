@@ -1,3 +1,7 @@
+import camelCase from 'lodash/camelCase';
+import salesLinks from './salesLinks';
+import SalesLinksNotFoundError from './SalesLinksNotFoundError';
+
 /**
  * Service for managing Album data.
  */
@@ -15,6 +19,20 @@ export default class AlbumService {
    */
   get albums() {
     return this.albumFactories.map(factory => factory.newAlbum());
+  }
+
+  /**
+   * Gets an object with site constants as keys and URLs as values for links
+   * to digital sales pages for an album.
+   * @param {Album} album
+   * @returns {Object}
+   */
+  getSalesLinks(album) {
+    const links = salesLinks[camelCase(album.title)];
+    if (!links) {
+      throw new SalesLinksNotFoundError(album);
+    }
+    return links;
   }
 
   /**
