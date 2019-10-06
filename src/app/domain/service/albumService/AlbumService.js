@@ -1,5 +1,6 @@
 import camelCase from 'lodash/camelCase';
 import salesLinks from './salesLinks';
+import InvalidAlbumTitleError from './InvalidAlbumTitleError';
 import SalesLinksNotFoundError from './SalesLinksNotFoundError';
 
 /**
@@ -11,6 +12,7 @@ export default class AlbumService {
    */
   constructor({ albumFactories }) {
     this.albumFactories = albumFactories;
+    this._albums = null;
   }
 
   /**
@@ -18,7 +20,31 @@ export default class AlbumService {
    * @returns {Album[]} Array of albums.
    */
   get albums() {
-    return this.albumFactories.map(factory => factory.newAlbum());
+    let albums = this._albums;
+    if (!albums) {
+      albums = this.albumFactories.map(factory => factory.newAlbum());
+      this._albums = albums;
+    }
+    return albums;
+  }
+
+  /**
+   * Finds an album by its title.
+   * @param {string} title Album title to search for.
+   * @param {boolean} [isCamelCase] Optionally indicates if the given title is
+   *        in camelCase - defaults to true.
+   * @returns {Album} The album with the given title.
+   * @throws {InvalidAlbumTitleError} If the album cannot be found.
+   */
+  findByTitle({ title, isCamelCase = true }) {
+    const album = this.albums.find(album => {
+      const cmpTitle = isCamelCase ? camelCase(album.title) : album.title;
+      return title === cmpTitle;
+    });
+    if (!album) {
+      throw new InvalidAlbumTitleError(title);
+    }
+    return album;
   }
 
   /**
@@ -26,6 +52,8 @@ export default class AlbumService {
    * to digital sales pages for an album.
    * @param {Album} album
    * @returns {Object}
+   * @throws {SalesLinksNotFoundError} If there are no sales links configured
+   *         for the given album.
    */
   getSalesLinks(album) {
     const links = salesLinks[camelCase(album.title)];
@@ -41,8 +69,8 @@ export default class AlbumService {
    * @param {boolean} [desc] Sort in descending order, defaults to true.
    * @returns {Album[]} Sorted array of given albums.
    */
-  sortByDate({ albums = this.albums , desc = true }) {
-    return albums.sort((a, b) => {
+  sortByDate({ albums = this.albums, desc = true } = {}) {
+    return [...albums].sort((a, b) => {
       let val = 0;
       if (a.date < b.date) {
         val = -1;

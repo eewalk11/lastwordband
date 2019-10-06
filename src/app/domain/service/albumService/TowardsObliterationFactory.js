@@ -1,7 +1,8 @@
 import moment from 'moment';
-import { Album } from '../../model';
 import artwork from './bin/TowardsObliteration.jpg';
 import artworkSmall from './bin/TowardsObliteration_small.jpg';
+import { Album } from '../../model';
+import { TOWARDS_OBLITERATION } from 'app/const';
 
 /**
  * Generates the Towards Obliteration Album entity.
@@ -22,7 +23,7 @@ export default class TowardsObliterationFactory {
    */
   newAlbum() {
     let album = new Album({
-      title: 'Towards Obliteration',
+      title: TOWARDS_OBLITERATION,
       date: moment('2012-07-07').toDate(),
       artwork,
       artworkSmall

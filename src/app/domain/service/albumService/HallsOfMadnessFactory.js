@@ -1,7 +1,8 @@
 import moment from 'moment';
-import { Album } from '../../model';
 import artwork from './bin/HallsOfMadness.jpg';
 import artworkSmall from './bin/HallsOfMadness_small.jpg';
+import { Album } from '../../model';
+import { HALLS_OF_MADNESS } from 'app/const';
 
 /**
  * Generates the Halls of Madness Album entity.
@@ -22,7 +23,7 @@ export default class HallsOfMadnessFactory {
    */
   newAlbum() {
     let album = new Album({
-      title: 'Halls of Madness',
+      title: HALLS_OF_MADNESS,
       date: moment('2016-06-09').toDate(),
       artwork,
       artworkSmall
