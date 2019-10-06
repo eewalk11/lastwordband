@@ -11,11 +11,3 @@
 	padding-top:    $top;
 	padding-bottom: $bottom;
 }
-
-//Create an album art background property
-
-@mixin albumArtBackground($title, $file) {
-	#album[data-title='#{$title}'] #album-art {
-		background-image: url(/img/art/#{$file});
-	}
-}

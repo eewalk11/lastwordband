@@ -1,0 +1,50 @@
+@import '../../../../sass/mixins/media-queries';
+@import '../../../../sass/pages/music/music-vars';
+
+// Table layout
+
+.album-art {
+  // Background image set in the component
+  background-color: transparent;
+  background-position: center/top;
+  background-repeat: no-repeat;
+  height: $albumArtWidth;
+  width: $albumArtWidth;
+
+  @include media_small_mobile(#{$musicMediaSmall}px) {
+    height: $albumArtWidthSmall;
+    width: $albumArtWidthSmall;
+  }
+}
+
+.album-details {
+  display: table;
+  margin-left: 200px;
+  min-height: $albumArtWidth;
+}
+
+.album-details__col {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.album-details__row {
+  display: table-row;
+}
+
+// On medium screen size change from table to a vertical layout
+
+@include media_medium_less {
+  .album-art {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .album-details, .album-details__row, .album-details__col {
+    display: block;
+  }
+
+  .album-details {
+    margin-left: 0;
+  }
+}

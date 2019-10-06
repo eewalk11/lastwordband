@@ -1,0 +1,51 @@
+@import '../../../../../sass/mixins/media-queries';
+@import '../../../../../sass/pages/music/music-mixins';
+@import '../../../../../sass/pages/music/music-vars';
+
+// Purchase link icon size
+$iconSize: 32px;
+
+.album-links {
+  background-color: #404040;
+  border-radius: 1rem;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 1rem;
+  width: $albumArtWidth;
+
+  // Center the links when the display breaks from table layout
+  @include media_medium_less {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Smaller size when the album art gets smaller
+  @include album_art_breakpoint {
+    width: $albumArtWidthSmall;
+  }
+}
+
+.album-link {
+  align-items: center;
+  display: flex;
+  margin: .5rem 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.album-link__icon {
+  height: $iconSize;
+  margin-right: 1rem;
+  width: $iconSize;
+}
+
+.album-link__text {
+  &, &:visited {
+    color: #ffffff;
+  }
+}

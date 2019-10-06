@@ -1,0 +1,66 @@
+@import '../../../../../sass/mixins/media-queries';
+@import '../../../../../sass/pages/music/music-vars';
+@import '../../../../../sass/vars/colors';
+@import '../../../../../sass/vars/screen-sizes';
+
+.tracklist {
+  font-size: 16px;
+  margin: 0;
+  padding: 0 0 0 64px;
+
+  // Change margins when the display changes from the table layout
+  @include media_medium(#{$musicMediaSmall + 1}px) {
+    margin-top: 4rem;
+    padding-left: 8rem;
+  }
+
+  // Even smaller margins when the album art gets smaller
+  @media only screen and (max-width: #{$musicMediaSmall}px),
+  only screen and (max-device-width: 600px) {
+    margin-top: 4rem;
+    padding-left: 4rem;
+  }
+
+  @include media_medium_less {
+    font-size: 1rem;
+  }
+}
+
+.track {
+  margin: 0;
+
+  &:first-child {
+    .track__title {
+      padding-top: 0;
+    }
+  }
+
+  &:last-child {
+    .track__title {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.track__title {
+  display: block;
+  font-weight: bold;
+  padding: 4px 0;
+}
+
+.track__lyrics {
+  color: $lightGreen;
+  display: none; // Hidden until the title is clicked
+  font-size: 14px;
+  padding: 0 0 0 8px;
+  white-space: pre;
+
+  // When this class is applied an animation will play to expand the lyrics
+  .track__lyrics--expanded {
+    display: block;
+  }
+
+  @include media_medium_less {
+    font-size: 1rem;
+  }
+}

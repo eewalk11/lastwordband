@@ -14,7 +14,7 @@ export default function AlbumLink({ album }) {
         <a href={ uri }>{ album.title }</a>
       </cite>
       <a className='home__album-link--artwork' href={ uri }>
-        <img src={ album.artworkSmall } alt={ `${album.title} artwork`} />
+        <img alt={ `${album.title} artwork` } src={ album.artworkSmall } />
       </a>
     </li>
   );

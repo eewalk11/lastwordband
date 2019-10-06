@@ -1,0 +1,8 @@
+@import './music-vars';
+
+@mixin album_art_breakpoint {
+  @media only screen and (max-width: #{$musicMediaSmall}px),
+  only screen and (max-device-width: 600px) {
+    @content;
+  }
+}

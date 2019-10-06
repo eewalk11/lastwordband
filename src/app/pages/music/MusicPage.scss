@@ -1,0 +1,5 @@
+@import '../../../sass/mixins/spacing';
+
+.music-page {
+  @include verticalMargin;
+}
