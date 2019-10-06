@@ -4,7 +4,7 @@ import towardsObliteration from './towardsObliteration';
 import wakingDream from './wakingDream';
 import wasted from './wasted';
 
-export default {
+export const lyrics = {
   edenBurns,
   eyesOfPestilence,
   towardsObliteration,

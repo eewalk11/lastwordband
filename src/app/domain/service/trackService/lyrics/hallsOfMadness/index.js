@@ -12,7 +12,7 @@ import throughTwistedTrees from './throughTwistedTrees';
 import towardsObliteration from './towardsObliteration';
 import wakingDream from './wakingDream';
 
-export default {
+export const lyrics = {
   afterMeTheFloods,
   awakening,
   edenBurns,

@@ -1,6 +1,6 @@
 import camelCase from 'lodash/camelCase';
 import get from 'lodash/get';
-import lyrics from './lyrics';
+import { lyrics } from './lyrics';
 import LyricsNotFoundError from './LyricsNotFoundError';
 
 /**

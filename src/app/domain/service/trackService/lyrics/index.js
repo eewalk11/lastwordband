@@ -1,7 +1,7 @@
-import hallsOfMadness from './hallsOfMadness/hallsOfMadness';
-import towardsObliteration from './towardsObliteration';
+import { lyrics as hallsOfMadness } from './hallsOfMadness';
+import { lyrics as towardsObliteration } from './towardsObliteration';
 
-export default {
+export const lyrics = {
   hallsOfMadness,
   towardsObliteration
 };
