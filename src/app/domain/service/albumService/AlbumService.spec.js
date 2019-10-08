@@ -1,9 +1,10 @@
+import { mockAlbumFactory } from './AlbumFactory.mock';
 import AlbumService from './AlbumService';
 import InvalidAlbumTitleError from './InvalidAlbumTitleError';
 import SalesLinksNotFoundError from './SalesLinksNotFoundError';
 import { HALLS_OF_MADNESS } from 'app/const';
 import { Album } from 'app/domain';
-import { chance, mockAlbumFactory } from 'app/test';
+import { chance } from 'app/util';
 
 const setup = (overrides = {}) => {
   const args = {

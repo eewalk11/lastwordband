@@ -13,3 +13,6 @@ const albumFactories = [
 ];
 
 export const albumService = new AlbumService({ albumFactories });
+
+export * from './AlbumFactory.mock';
+export * from './AlbumService.mock';

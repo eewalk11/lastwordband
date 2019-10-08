@@ -1,5 +1,5 @@
-import chance from '../chance';
-import { Album } from 'app/domain';
+import { chance } from 'app/util';
+import { Album } from 'app/domain/index';
 
 export const mockAlbumFactory = (albumProps = {}) => ({
   newAlbum: () => new Album({
