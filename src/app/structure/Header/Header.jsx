@@ -6,7 +6,9 @@ export default function Header() {
   return (
     <header className="page-header">
       <h1>
-        <img src={headerLogoImage} alt="Last Word" />
+        <a href="/">
+          <img src={headerLogoImage} alt="Last Word" />
+        </a>
       </h1>
       <h2>Colorado Death Thrash</h2>
     </header>
