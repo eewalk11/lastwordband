@@ -1,0 +1,23 @@
+@import '../../../../../sass/mixins/media-queries';
+@import '../../../../../sass/pages/music/music-mixins';
+@import '../../../../../sass/pages/music/music-vars';
+
+.album-links {
+  background-color: #404040;
+  border-radius: 1rem;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 1rem;
+  width: $albumArtWidth;
+
+  // Center the links when the display breaks from table layout
+  @include media_medium_less {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Smaller size when the album art gets smaller
+  @include album_art_breakpoint {
+    width: $albumArtWidthSmall;
+  }
+}

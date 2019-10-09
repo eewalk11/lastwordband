@@ -1,0 +1,47 @@
+@import '../../../../../sass/mixins/compatibility';
+@import '../../../../../sass/mixins/media-queries';
+@import '../../../../../sass/vars/colors';
+
+.track {
+  margin: 0;
+
+  &:first-child {
+    .track__title {
+      padding-top: 0;
+    }
+  }
+
+  &:last-child {
+    .track__title {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.track__title {
+  display: block;
+  font-weight: bold;
+  padding: 4px 0;
+  @include transitionWithVendors('color 600ms');
+
+  &:hover {
+    color: #b00000;
+    cursor: pointer;
+    @include transitionWithVendors('color 600ms');
+  }
+}
+
+.track__lyrics {
+  color: $lightGreen;
+  display: block;
+  font-size: 14px;
+  height: 0; // Hidden until the title is clicked - set in Track.jsx
+  overflow: hidden;
+  padding: 0 0 0 8px;
+  @include transitionWithVendors('height 800ms');
+  white-space: pre;
+
+  @include media_medium_less {
+    font-size: 1rem;
+  }
+}

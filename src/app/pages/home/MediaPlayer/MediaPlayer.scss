@@ -1,0 +1,40 @@
+@import '../../../../sass/mixins/spacing';
+
+.home__media-player--wrapper {
+  @include horizontalPadding;
+
+  margin-top: 8rem;
+  text-align: center;
+
+  p {
+    max-width: 850px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  cite {
+    font-weight: bold;
+  }
+
+  @include media_small_mobile {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    h2 {
+      text-align: left;
+    }
+  }
+}
+
+.home__media-player--link {
+  white-space: nowrap;
+}
+
+.home__media-player {
+  border: 2px solid #404040;
+  margin-top: 2em;
+  max-width: 100%;
+  min-width: 100%;
+  height: 150px;
+  width: 0;
+}

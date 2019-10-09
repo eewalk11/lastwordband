@@ -1,0 +1,25 @@
+@import '../../../../../sass/mixins/media-queries';
+@import '../../../../../sass/pages/music/music-vars';
+
+.tracklist {
+  font-size: 16px;
+  margin: 0;
+  padding: 0 0 0 64px;
+
+  // Change margins when the display changes from the table layout
+  @include media_medium(#{$musicMediaSmall + 1}px) {
+    margin-top: 4rem;
+    padding-left: 8rem;
+  }
+
+  // Even smaller margins when the album art gets smaller
+  @media only screen and (max-width: #{$musicMediaSmall}px),
+  only screen and (max-device-width: 600px) {
+    margin-top: 4rem;
+    padding-left: 4rem;
+  }
+
+  @include media_medium_less {
+    font-size: 1rem;
+  }
+}

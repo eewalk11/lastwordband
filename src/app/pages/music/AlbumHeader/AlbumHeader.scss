@@ -1,0 +1,25 @@
+@import '../../../../sass/mixins/media-queries';
+
+.album-header__title, .album-header__release-date {
+  text-align: center;
+}
+
+.album-header__title {
+  font-size: 3rem;
+  margin: 0 0 .15em;
+
+  @include media_small_mobile {
+    font-size: 2rem;
+  }
+}
+
+.album-header__release-date {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+
+  @include media_small_mobile {
+    font-size: 1.25rem;
+  }
+}

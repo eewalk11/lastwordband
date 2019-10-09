@@ -1,0 +1,27 @@
+@import '../../../sass/mixins/spacing';
+@import '../../../sass/vars/colors';
+
+.page-footer {
+  @include verticalMargin;
+
+  background-color: $deepGreen;
+  color: $darkGreen;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 2rem 4rem;
+
+  a {
+    color: $darkGreen;
+    text-decoration: underline;
+
+    &:hover {
+      color: $lightGreen;
+    }
+  }
+}
+
+.copyright {
+  span {
+    display: block;
+  }
+}

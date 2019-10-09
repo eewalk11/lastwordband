@@ -1,0 +1,32 @@
+@import '../vars/screen-sizes';
+
+@mixin media_medium($min_view_w: #{$media_small + 1}px, $max_view_w: #{$media_medium}px) {
+  @media only screen and (min-width: #{$min_view_w}) and (max-width: #{$max_view_w}) {
+    @content;
+  }
+}
+
+@mixin media_medium_less($max_view_w: #{$media_medium}px) {
+  @media only screen and (max-width: #{$max_view_w}) {
+    @content;
+  }
+}
+
+@mixin media_small($max_view_w: #{$media_small}px) {
+  @media only screen and (max-width: #{$max_view_w}) {
+    @content;
+  }
+}
+
+@mixin media_small_mobile($max_view_w: #{$media_small}px, $max_dev_w: #{$media_mobile}px) {
+  @media only screen and (max-width: #{$max_view_w}),
+  only screen and (max-device-width: #{$max_dev_w}) {
+    @content;
+  }
+}
+
+@mixin media_mobile($max_dev_w: #{$media_mobile}px) {
+  @media only screen and (max-device-width: #{$max_dev_w}) {
+    @content;
+  }
+}

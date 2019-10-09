@@ -1,0 +1,59 @@
+@import '../../../sass/mixins/media-queries';
+@import '../../../sass/mixins/text';
+@import '../../../sass/vars/colors';
+
+.page-header {
+  padding-top: 32px;
+  position: relative;
+
+  h1 {
+    margin: 0;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+  }
+
+  h2 {
+    @include text_shadow;
+    color: $crimson;
+    font-size: 60px;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 190px;
+    width: 100%;
+    z-index: 2;
+  }
+
+  img {
+    display: inline-block;
+  }
+}
+
+@include media_small_mobile {
+  .page-header {
+    img {
+      height: auto;
+      width: 350px;
+    }
+
+    h2 {
+      font-size: 27px;
+      top: 105px;
+    }
+  }
+}
+
+@include media_medium(#{$media_small + 1}px, 1020px) {
+  .page-header {
+    img {
+      height: auto;
+      width: 600px;
+    }
+
+    h2 {
+      font-size: 45px;
+      top: 150px;
+    }
+  }
+}
