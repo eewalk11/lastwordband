@@ -1,6 +1,6 @@
 @import '../../../sass/mixins/media-queries';
 
-.bgwrapper1, .bgwrapper2 {
+.bg-wrapper-1, .bg-wrapper-2 {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: contain;
@@ -10,7 +10,7 @@
   z-index: -1;
 }
 
-.bgwrapper1 {
+.bg-wrapper-1[data-route="/"] {
   background-image: url(./bin/skullBgLeft.png);
   background-position: left center;
 
@@ -20,7 +20,7 @@
   }
 }
 
-.bgwrapper2 {
+.bg-wrapper-2[data-route="/"] {
   background-image: url(./bin/skullBgRight.png);
   background-position: right center;
 }

@@ -1,12 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { ContentWrapper } from 'app/structure';
 import { AlbumLinkList } from './AlbumLinkList';
 import { MediaPlayer } from './MediaPlayer';
 
 export default function HomePage() {
   return (
-    <Fragment>
+    <ContentWrapper>
       <MediaPlayer />
       <AlbumLinkList />
-    </Fragment>
+    </ContentWrapper>
   );
 }

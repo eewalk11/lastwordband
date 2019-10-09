@@ -1,1 +1,4 @@
-export { default as ContentWrapper } from './ContentWrapper';
+import { withRouter } from 'react-router-dom';
+import ContentWrapperBase from './ContentWrapper';
+
+export const ContentWrapper = withRouter(ContentWrapperBase);

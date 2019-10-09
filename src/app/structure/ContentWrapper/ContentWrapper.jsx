@@ -2,13 +2,17 @@ import React from 'react';
 import { Footer, Header } from 'app/structure';
 import './ContentWrapper.scss';
 
-export default function ContentWrapper({ children }) {
+/**
+ * Wrapper for content on a page.
+ * This should be included in each <Page /> component.
+ * @param {Component[]} children
+ * @param location
+ */
+export default function ContentWrapper({ children, location }) {
   return (
     <div className='page-wrapper'>
-      {/* These divs will be sized to fit the screen using JavaScript and will contain background
-          images. There can be up to this many background images on a page */}
-      <div className='bgwrapper1' />
-      <div className='bgwrapper2' />
+      <div className='bg-wrapper-1' data-route={location.pathname} />
+      <div className='bg-wrapper-2' data-route={location.pathname} />
 
       <Header />
       <main className='content-wrapper'>
