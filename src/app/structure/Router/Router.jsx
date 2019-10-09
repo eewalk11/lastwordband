@@ -13,7 +13,6 @@ const getValidAlbumsRegexp = (albumService) => {
  * @param {AlbumService} albumService
  */
 export default function Router({ albumService }) {
-  console.log(`/music/:albumTitle(${getValidAlbumsRegexp(albumService)})`);
   return (
     <BrowserRouter>
       <Switch>

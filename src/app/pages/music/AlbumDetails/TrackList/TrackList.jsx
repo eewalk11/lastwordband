@@ -14,6 +14,7 @@ export default function TrackList({ album, trackService }) {
       { album.tracks.map(track =>
         <Track album={ album }
                isSelected={ get(selectedTrack, 'id') === track.id }
+               key={ track.id }
                setSelectedTrack={ setSelectedTrack }
                track={ track }
                trackService={ trackService }

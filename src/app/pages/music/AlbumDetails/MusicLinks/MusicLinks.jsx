@@ -7,6 +7,7 @@ import {
   SPOTIFY,
   YOUTUBE
 } from 'app/const';
+import AlbumLink from './AlbumLink';
 import amazonIconImage from './bin/amazonIcon.png';
 import cdbabyIconImage from './bin/cdbabyIcon.png';
 import googleIconImage from './bin/googleIcon.png';
@@ -57,30 +58,20 @@ export default function MusicLinks({ album, albumService }) {
   const albumLinks = albumService.getSalesLinks(album);
   const filteredData = linkData.filter(data => Boolean(albumLinks[data.key]));
 
-  // Only render a component if there is one or more link to display
-  if (filteredData) {
-    return (
-      <ul className='album-links'>
-        { filteredData.map(data => {
-          const url = albumLinks[data.key];
-
-          return (
-            <li className='album-link'>
-              <a href={ url }
-                 rel='noopener noreferrer'
-                 target='_blank'>
-                <img alt={ data.text } className='album-link__icon' src={ data.image } />
-              </a>
-              <a className='album-link__text'
-                 href={ url }
-                 rel='noopener noreferrer'
-                 target='_blank'>
-                { data.text }
-              </a>
-            </li>
-          );
-        }) }
-      </ul>
-    );
+  // Do not render a component if there are no links to display
+  if (!filteredData.length) {
+    return null;
   }
+
+  return (
+    <ul className='album-links'>
+      { filteredData.map(data =>
+          <AlbumLink
+            { ...data }
+            key={ data.key }
+            url={ albumLinks[data.key] }
+          />
+      ) }
+    </ul>
+  );
 }
