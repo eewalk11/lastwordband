@@ -1,4 +1,5 @@
 import React  from 'react';
+import { ContentWrapper } from 'app/structure';
 import { AlbumDetails } from './AlbumDetails';
 import { AlbumHeader } from './AlbumHeader';
 import './MusicPage.scss';
@@ -11,9 +12,11 @@ import './MusicPage.scss';
 export default function MusicPage({ match, albumService }) {
   const album = albumService.findByTitle({ title: match.params.albumTitle });
   return (
-    <div className='music-page'>
-      <AlbumHeader album={album} />
-      <AlbumDetails album={album} />
-    </div>
+    <ContentWrapper>
+      <div className='music-page'>
+        <AlbumHeader album={album} />
+        <AlbumDetails album={album} />
+      </div>
+    </ContentWrapper>
   );
 }

@@ -10,6 +10,13 @@
   z-index: -1;
 }
 
+.content-wrapper {
+  position: relative;
+  z-index: 0;
+}
+
+// Home page
+
 .bg-wrapper-1[data-route="/"] {
   background-image: url(./bin/skullBgLeft.png);
   background-position: left center;
@@ -25,7 +32,41 @@
   background-position: right center;
 }
 
-.content-wrapper {
-  position: relative;
-  z-index: 0;
+// Music page
+
+.bg-wrapper-1[data-route^="/music/"] {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: .2;
+}
+
+.bg-wrapper-2[data-route^="/music/"] {
+  display: none;
+}
+
+// Towards Obliteration album page
+
+.bg-wrapper-1[data-route="/music/towardsObliteration"] {
+  background-image: url(./bin/bloodSkull.jpg);
+  background-position: right bottom;
+  @media only screen and (max-height: 800px), only screen and (max-device-height: 800px) {
+    background-image: url(./bin/bloodSkull_medium.jpg);
+  }
+  @media only screen and (max-height: 500px), only screen and (max-device-height: 500px) {
+    background-image: url(./bin/bloodSkull_small.jpg);
+  }
+}
+
+// Halls of Madness album page
+
+.bg-wrapper-1[data-route="/music/hallsOfMadness"] {
+  background-image: url(./bin/spikeEyes.jpg);
+  background-position: left center;
+  @media only screen and (max-height: 800px), only screen and (max-device-height: 800px) {
+    background-image: url(./bin/spikeEyes_medium.jpg);
+  }
+  @media only screen and (max-height: 500px), only screen and (max-device-height: 500px) {
+    background-image: url(./bin/spikeEyes_small.jpg);
+  }
 }
