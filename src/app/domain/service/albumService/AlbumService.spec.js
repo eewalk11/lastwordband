@@ -8,11 +8,7 @@ import { chance } from 'app/util';
 
 const setup = (overrides = {}) => {
   const args = {
-    albumFactories: [
-      mockAlbumFactory(),
-      mockAlbumFactory(),
-      mockAlbumFactory()
-    ]
+    albumFactories: [mockAlbumFactory(), mockAlbumFactory(), mockAlbumFactory()]
   };
   return new AlbumService({ ...args, ...overrides });
 };
@@ -51,7 +47,7 @@ describe('AlbumService unit tests', () => {
     beforeEach(() => {
       // Generate albums with predictable titles
       const albumFactories = [
-        mockAlbumFactory({ title: 'Album X'}),
+        mockAlbumFactory({ title: 'Album X' }),
         mockAlbumFactory({ title: 'Test Title' }),
         mockAlbumFactory({ title: 'Album Y' })
       ];
@@ -118,12 +114,12 @@ describe('AlbumService unit tests', () => {
 
     it('Correctly sorts albums in ascending order', () => {
       const result = subject.sortByDate({ desc: false });
-      expect(result).toEqual([ album1, album2, album3 ]);
+      expect(result).toEqual([album1, album2, album3]);
     });
 
     it('Correctly sorts albums in descending order', () => {
       const result = subject.sortByDate();
-      expect(result).toEqual([ album3, album2, album1 ]);
+      expect(result).toEqual([album3, album2, album1]);
     });
 
     it('Does not modify the source array', () => {

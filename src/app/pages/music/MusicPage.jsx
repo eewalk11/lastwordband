@@ -1,9 +1,9 @@
-import React  from 'react';
+import React from 'react';
 import { ContentWrapper } from 'app/structure';
 import { AlbumDetails } from './AlbumDetails';
 import { AlbumHeader } from './AlbumHeader';
 import './MusicPage.scss';
-import {Helmet} from 'react-helmet';
+import { Helmet } from 'react-helmet';
 
 /**
  * Music page.
@@ -15,13 +15,13 @@ export default function MusicPage({ match, albumService }) {
   return (
     <ContentWrapper>
       <Helmet>
-        <title>Music – { album.title } | Last Word</title>
+        <title>Music – {album.title} | Last Word</title>
         <meta
           name="description"
           content="Last Word music. Our new album, Halls of Madness, is here!"
         />
       </Helmet>
-      <div className='music-page'>
+      <div className="music-page">
         <AlbumHeader album={album} />
         <AlbumDetails album={album} />
       </div>

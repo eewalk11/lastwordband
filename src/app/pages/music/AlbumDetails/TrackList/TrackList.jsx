@@ -10,16 +10,17 @@ import './TrackList.scss';
 export default function TrackList({ album, trackService }) {
   const [selectedTrack, setSelectedTrack] = useState(null);
   return (
-    <ol className='tracklist'>
-      { album.tracks.map(track =>
-        <Track album={ album }
-               isSelected={ get(selectedTrack, 'id') === track.id }
-               key={ track.id }
-               setSelectedTrack={ setSelectedTrack }
-               track={ track }
-               trackService={ trackService }
+    <ol className="tracklist">
+      {album.tracks.map(track => (
+        <Track
+          album={album}
+          isSelected={get(selectedTrack, 'id') === track.id}
+          key={track.id}
+          setSelectedTrack={setSelectedTrack}
+          track={track}
+          trackService={trackService}
         />
-      ) }
+      ))}
     </ol>
   );
 }

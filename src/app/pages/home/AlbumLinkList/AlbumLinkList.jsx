@@ -8,9 +8,11 @@ import './AlbumLinkList.scss';
  */
 export default function AlbumLinkList({ albumService }) {
   return (
-    <div className='home__album-link-list--wrapper'>
+    <div className="home__album-link-list--wrapper">
       <ul>
-        { albumService.sortByDate({ desc: true }).map(album => <AlbumLink key={album.id} album={album} />) }
+        {albumService.sortByDate({ desc: true }).map(album => (
+          <AlbumLink key={album.id} album={album} />
+        ))}
       </ul>
     </div>
   );

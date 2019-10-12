@@ -19,5 +19,5 @@ export default class TrackService {
       throw new LyricsNotFoundError(path);
     }
     return trackLyrics;
-  };
+  }
 }

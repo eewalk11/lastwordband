@@ -9,12 +9,12 @@ import './AlbumLink.scss';
 export default function AlbumLink({ album }) {
   const uri = `/music/${camelCase(album.title)}`;
   return (
-    <li className='home__album-link'>
-      <cite className='home__album-link--title'>
-        <a href={ uri }>{ album.title }</a>
+    <li className="home__album-link">
+      <cite className="home__album-link--title">
+        <a href={uri}>{album.title}</a>
       </cite>
-      <a className='home__album-link--artwork' href={ uri }>
-        <img alt={ `${album.title} artwork` } src={ album.artworkSmall } />
+      <a className="home__album-link--artwork" href={uri}>
+        <img alt={`${album.title} artwork`} src={album.artworkSmall} />
       </a>
     </li>
   );

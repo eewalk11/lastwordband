@@ -3,7 +3,7 @@ import camelCase from 'lodash/camelCase';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { HomePage, MusicPage } from '../../pages';
 
-const getValidAlbumsRegexp = (albumService) => {
+const getValidAlbumsRegexp = albumService => {
   const titles = albumService.albums.map(album => camelCase(album.title));
   return titles.join('|');
 };
@@ -16,11 +16,11 @@ export default function Router({ albumService }) {
   return (
     <BrowserRouter>
       <Switch>
-        <Route component={ HomePage } exact path="/" />
+        <Route component={HomePage} exact path="/" />
         <Route
-          component={ MusicPage }
-          data-testid='music-page-route'
-          path={ `/music/:albumTitle(${getValidAlbumsRegexp(albumService)})` }
+          component={MusicPage}
+          data-testid="music-page-route"
+          path={`/music/:albumTitle(${getValidAlbumsRegexp(albumService)})`}
         />
       </Switch>
     </BrowserRouter>

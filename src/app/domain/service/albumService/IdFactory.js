@@ -18,7 +18,7 @@ export default class IdFactory {
       ...album,
       id: uuidV5(album.title, UUID_NAMESPACE)
     });
-  };
+  }
 
   /**
    * Generates a Track with a consistent UUID applied.
@@ -37,5 +37,5 @@ export default class IdFactory {
       ...track,
       id: uuidV5(`${album.id}:${track.number}`, UUID_NAMESPACE)
     });
-  };
+  }
 }
