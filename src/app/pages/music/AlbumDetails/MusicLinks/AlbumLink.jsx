@@ -9,17 +9,17 @@ import './AlbumLink.scss';
  */
 export default function AlbumLink({ image, text, url }) {
   return (
-    <li className='album-link'>
-      <a href={ url }
-         rel='noopener noreferrer'
-         target='_blank'>
-        <img alt={ text } className='album-link__icon' src={ image } />
+    <li className="album-link">
+      <a href={url} rel="noopener noreferrer" target="_blank">
+        <img alt={text} className="album-link__icon" src={image} />
       </a>
-      <a className='album-link__text'
-         href={ url }
-         rel='noopener noreferrer'
-         target='_blank'>
-        { text }
+      <a
+        className="album-link__text"
+        href={url}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        {text}
       </a>
     </li>
   );

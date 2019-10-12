@@ -15,10 +15,8 @@ export default function Footer() {
             {CONTACT_EMAIL}
           </a>
         </span>
-        <span>
-          &copy; {currentYear} – Last Word
-        </span>
+        <span>&copy; {currentYear} – Last Word</span>
       </div>
     </footer>
   );
-};
+}

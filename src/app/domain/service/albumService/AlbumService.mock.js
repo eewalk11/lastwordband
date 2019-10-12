@@ -1,4 +1,4 @@
-export const mockAlbumService = (overrides) => ({
+export const mockAlbumService = overrides => ({
   albums: [],
   findByTitle: jest.fn(),
   getSalesLinks: jest.fn(),

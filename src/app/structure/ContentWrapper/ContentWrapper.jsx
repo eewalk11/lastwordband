@@ -10,14 +10,12 @@ import './ContentWrapper.scss';
  */
 export default function ContentWrapper({ children, location }) {
   return (
-    <div className='page-wrapper'>
-      <div className='bg-wrapper-1' data-route={location.pathname} />
-      <div className='bg-wrapper-2' data-route={location.pathname} />
+    <div className="page-wrapper">
+      <div className="bg-wrapper-1" data-route={location.pathname} />
+      <div className="bg-wrapper-2" data-route={location.pathname} />
 
       <Header />
-      <main className='content-wrapper'>
-        {children}
-      </main>
+      <main className="content-wrapper">{children}</main>
       <Footer />
     </div>
   );

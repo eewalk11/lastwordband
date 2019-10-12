@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  AMAZON,
-  CDBABY,
-  GOOGLE,
-  ITUNES,
-  SPOTIFY,
-  YOUTUBE
-} from 'app/const';
+import { AMAZON, CDBABY, GOOGLE, ITUNES, SPOTIFY, YOUTUBE } from 'app/const';
 import AlbumLink from './AlbumLink';
 import amazonIconImage from './bin/amazonIcon.png';
 import cdbabyIconImage from './bin/cdbabyIcon.png';
@@ -64,14 +57,10 @@ export default function MusicLinks({ album, albumService }) {
   }
 
   return (
-    <ul className='album-links'>
-      { filteredData.map(data =>
-          <AlbumLink
-            { ...data }
-            key={ data.key }
-            url={ albumLinks[data.key] }
-          />
-      ) }
+    <ul className="album-links">
+      {filteredData.map(data => (
+        <AlbumLink {...data} key={data.key} url={albumLinks[data.key]} />
+      ))}
     </ul>
   );
 }

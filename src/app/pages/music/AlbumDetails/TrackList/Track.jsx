@@ -5,11 +5,9 @@ import './Track.scss';
  * Resets all lyric block heights to 0.
  */
 const collapseAllLyrics = () => {
-  document
-    .querySelectorAll('.track__lyrics')
-    .forEach(element => {
-      element.style.height = '0';
-    });
+  document.querySelectorAll('.track__lyrics').forEach(element => {
+    element.style.height = '0';
+  });
 };
 
 /**
@@ -45,19 +43,18 @@ export default function Track({
   const clickHandler = () => {
     if (!isSelected) {
       collapseAllLyrics();
-      expandSelectedLyrics({elemId: lyricsId});
+      expandSelectedLyrics({ elemId: lyricsId });
       setSelectedTrack(track);
     }
   };
 
   return (
-    <li className='track'>
-      <span className='track__title'
-            onClick={ clickHandler }>
-        { track.title }
+    <li className="track">
+      <span className="track__title" onClick={clickHandler}>
+        {track.title}
       </span>
-      <span className='track__lyrics' id={ lyricsId }>
-        { trackService.getLyrics({ album, track }) }
+      <span className="track__lyrics" id={lyricsId}>
+        {trackService.getLyrics({ album, track })}
       </span>
     </li>
   );
